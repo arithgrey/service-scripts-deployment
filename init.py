@@ -24,8 +24,11 @@ import os
 from git import Repo, GitCommandError
 
 def download_repos(repos, base_dir):
+    services_dir = os.path.join(base_dir, 'services')
+    os.makedirs(services_dir, exist_ok=True)
+
     current_dir = os.getcwd() 
-    os.chdir(base_dir)
+    os.chdir(services_dir)
     for repo_url in repos:
         repo_name = repo_url.split('/')[-1].split('.')[0]
         try:

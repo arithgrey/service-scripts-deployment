@@ -22,7 +22,7 @@ class DockerComposeRunner:
         for compose_file in docker_compose_files:
             print(f"Running docker-compose up in {compose_file}...")
             os.chdir(os.path.dirname(compose_file))
-            result = subprocess.run(["docker-compose", "up"])
+            result = subprocess.run(["docker-compose", "up", "-d"])
             if result.returncode != 0:
                 print(f"Error executing docker-compose up in {compose_file}.")
 

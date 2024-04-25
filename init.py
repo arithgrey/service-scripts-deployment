@@ -48,7 +48,9 @@ def download_repos(repos, base_dir):
 
 if __name__ == "__main__":
     repositories = [
-        'git@github.com:arithgrey/service-store.git'
+        'git@github.com:arithgrey/service-store.git',
+        'git@github.com:arithgrey/service-references.git',
+        'git@github.com:arithgrey/enid-store.git'
     ]
 
     base_directory = os.getcwd()

@@ -30,3 +30,8 @@ alias update_alias='source  ~/.bashrc'
 #ENV
 alias add_env='python3 -m venv env'
 alias activate_env='source env/bin/activate'
+
+#Docker
+
+alias d_ps='docker ps'
+alias d_up='docker-compose up'

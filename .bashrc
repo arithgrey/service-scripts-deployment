@@ -9,7 +9,7 @@ alias co='git checkout'
 alias commit='git commit'
 alias br='git branch'
 alias df='git diff'
-
+alias co_b='pull_main && git checkout -b '
 alias pull_main='git checkout main &&  git pull origin main'
 alias checkout_b='git checkout -b'
 

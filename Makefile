@@ -27,3 +27,19 @@ update-local-proxy:
 docker_stop:
 	@docker stop $$(docker ps -q)
 	@echo "All running containers stopped."
+
+status_enid_service:
+
+	@echo "________ Status en enid-store__________"
+	cd /home/arith/services_enid/enid_service/enid && git status
+
+	@echo "________ Status en FRONTEND__________"
+	cd /home/arith/services_enid/frontend && git status
+
+	@echo "________ Status en OAUTH__________"
+
+	cd /home/arith/services_enid/service-oauth/service-oauth && git status
+
+	@echo "________ Status en scrips"
+
+	cd  /home/arith/services_enid/scripts && git status

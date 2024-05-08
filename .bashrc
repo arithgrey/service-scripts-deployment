@@ -48,3 +48,15 @@ alias access_token_cluster='kubectl -n kube-system describe secret $(kubectl -n 
 alias k_pods='kubectl get pods'
 alias k_services='kubectl get services'
 alias k_deployments='kubectl get deployments'
+alias add_namespace='kubectl create namespace '
+alias all_in_namespace='kubectl get all -n '
+
+#minikube
+
+alias m_start='minikube start --force'
+alias d_minikube='minikube delete'
+
+
+#heml
+alias l_helm='helm list'
+alias delete_heml='helm delete'

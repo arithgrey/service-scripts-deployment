@@ -35,3 +35,16 @@ alias activate_env='source env/bin/activate'
 
 alias d_ps='docker ps'
 alias d_up='docker-compose up'
+
+#Kubernetes
+alias st_minikube='minikube status'
+alias pods='kubectl get pods'
+alias pods_a='kubectl get pods -A'
+alias k_clusters='minikube profile list'
+alias k_nodes='kubectl get nodes'
+alias cluster_inf='kubectl cluster-info'
+alias ip_mini='minikube ip'
+alias access_token_cluster='kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep rancher | awk "{print $1}")'
+alias k_pods='kubectl get pods'
+alias k_services='kubectl get services'
+alias k_deployments='kubectl get deployments'

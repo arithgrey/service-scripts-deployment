@@ -50,11 +50,13 @@ alias k_services='kubectl get services'
 alias k_deployments='kubectl get deployments'
 alias add_namespace='kubectl create namespace '
 alias all_in_namespace='kubectl get all -n '
+alias k_namespaces='kubectl get namespaces'
 
 #minikube
 
 alias m_start='minikube start --force'
 alias d_minikube='minikube delete'
+alias cln_minikube='minikube delete --all'
 
 
 #heml

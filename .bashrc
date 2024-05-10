@@ -35,6 +35,8 @@ alias activate_env='source env/bin/activate'
 
 alias d_ps='docker ps'
 alias d_up='docker-compose up'
+alias cln_images_docker='docker image prune -a'
+alias cln_containers='docker container prune -f'
 
 #Kubernetes
 alias st_minikube='minikube status'

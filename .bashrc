@@ -64,3 +64,7 @@ alias cln_minikube='minikube delete --all'
 #heml
 alias l_helm='helm list'
 alias delete_heml='helm delete'
+
+
+#dev-django
+alias rm_migrations='find . -path "*/migrations/*.py" ! -name "__init__.py" -type f -delete'

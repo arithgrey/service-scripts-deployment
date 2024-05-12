@@ -37,6 +37,7 @@ alias d_ps='docker ps'
 alias d_up='docker-compose up'
 alias cln_images_docker='docker image prune -a'
 alias cln_containers='docker container prune -f'
+alias d_exec='docker exec -it'
 
 #Kubernetes
 alias st_minikube='minikube status'
@@ -60,11 +61,13 @@ alias m_start='minikube start --force'
 alias d_minikube='minikube delete'
 alias cln_minikube='minikube delete --all'
 
-
+ 
 #heml
 alias l_helm='helm list'
 alias delete_heml='helm delete'
 
-
 #dev-django
 alias rm_migrations='find . -path "*/migrations/*.py" ! -name "__init__.py" -type f -delete'
+alias migrations='python manage.py makemigrations'
+alias migrate='python manage.py migrate'
+

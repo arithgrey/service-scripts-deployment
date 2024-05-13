@@ -71,3 +71,8 @@ alias rm_migrations='find . -path "*/migrations/*.py" ! -name "__init__.py" -typ
 alias migrations='python manage.py makemigrations'
 alias migrate='python manage.py migrate'
 
+#nginx
+alias restart_nginx='systemctl restart nginx && systemctl status nginx'
+
+#alias
+alias alias_grep='alias | grep '

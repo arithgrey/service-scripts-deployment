@@ -76,3 +76,6 @@ alias restart_nginx='systemctl restart nginx && systemctl status nginx'
 
 #alias
 alias alias_grep='alias | grep '
+
+#pip
+alias pip_fr='pip freeze > requirements.txt'

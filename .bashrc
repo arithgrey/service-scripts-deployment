@@ -60,7 +60,7 @@ alias k_namespaces='kubectl get namespaces'
 alias m_start='minikube start --force'
 alias d_minikube='minikube delete'
 alias cln_minikube='minikube delete --all'
-
+alias delete_cluster_by_name='minikube delete -p '
  
 #heml
 alias l_helm='helm list'

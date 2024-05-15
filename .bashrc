@@ -54,6 +54,9 @@ alias k_deployments='kubectl get deployments'
 alias add_namespace='kubectl create namespace '
 alias all_in_namespace='kubectl get all -n '
 alias k_namespaces='kubectl get namespaces'
+alias k_apply_='kubectl apply -f .'
+alias k_use_namespace='kubectl config set-context --current '  
+alias k_describe_pod='kubectl describe pod '
 
 #minikube
 

@@ -60,6 +60,7 @@ alias k_apply_='kubectl apply -f .'
 alias k_use_namespace='kubectl config set-context --current '  
 alias k_describe_pod='kubectl describe pod '
 alias k_delete_pod='kubectl delete pod '
+alias k_delete_all_pods='kubectl delete pods --all'
 
 #minikube
 

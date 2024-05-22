@@ -86,3 +86,4 @@ alias alias_grep='alias | grep '
 
 #pip
 alias pip_fr='pip freeze > requirements.txt'
+alias pip_inst_requirements='pip install -r requirements.py '

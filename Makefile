@@ -5,7 +5,7 @@
 
 # Target to run docker_compose_runner.py
 local-up: 
-	@pipenv run python docker_compose_runner.py /home/arith/services_enid/
+	@pipenv run python docker_compose_runner.py /home/arithgrey/enid_service/services
 
 # Help target to display available targets and their descriptions
 help:
@@ -17,7 +17,7 @@ help:
 
 # Target to update NGINX proxy configuration
 update-local-proxy:
-	@sudo cp /home/arith/services_enid/reverse_proxy__nginx/proxy.conf /etc/nginx/sites-available/proxy.conf
+	@sudo cp /home/arithgrey/enid_service/services/reverse_proxy_nginx/proxy.conf /etc/nginx/sites-available/proxy.conf
 	@echo "NGINX proxy configuration updated."
 	@sudo systemctl restart nginx
 	@echo "NGINX restarted."
@@ -31,15 +31,29 @@ docker_stop:
 status_enid_service:
 
 	@echo "________ Status en enid-store__________"
-	cd /home/arith/services_enid/enid_service/enid && git status
 
-	@echo "________ Status en FRONTEND__________"
-	cd /home/arith/services_enid/frontend && git status
+	cd /home/arithgrey/enid_service/services/enid-store/enid && git status
 
-	@echo "________ Status en OAUTH__________"
+	@echo "______________Status faqs _______________________"
+	cd /home/arithgrey/enid_service/services/service-faqs/ && git status
 
-	cd /home/arith/services_enid/service-oauth/service-oauth && git status
+	@echo "______________Status store (frontend) _______________________"
+	cd /home/arithgrey/enid_service/services/frontend-store/ && git status
 
-	@echo "________ Status en scrips"
+	@echo "______________Status (Leads) _______________________"
+	cd /home/arithgrey/enid_service/services/service_leads && git status
 
-	cd  /home/arith/services_enid/scripts && git status
+	@echo "______________Status (oauth) _______________________"
+	cd /home/arithgrey/enid_service/services/service-oauth && git status
+
+	@echo "______________Status (service references) _______________________"
+	cd /home/arithgrey/enid_service/services/service-references && git status
+
+	@echo "______________Status (Reverse proxy ) _______________________"
+	cd /home/arithgrey/enid_service/services/reverse_proxy_nginx && git status
+
+	@echo "______________Status (scripts) _______________________"
+	cd /home/arithgrey/enid_service/services/service-scripts-deployment && git status
+
+	@echo "______________Status (stock) _______________________"
+	cd /home/arithgrey/enid_service/services/service_stock && git status

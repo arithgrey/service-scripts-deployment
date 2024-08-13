@@ -1,11 +1,7 @@
 # Define the default target
 .DEFAULT_GOAL := help
 
-.PHONY: local-up help docker_stop update-proxy
-
-# Target to run docker_compose_runner.py
-local-up: 
-	@pipenv run python docker_compose_runner.py /home/arithgrey/enid_service/services
+.PHONY: help docker_stop update-proxy
 
 # Help target to display available targets and their descriptions
 help:
